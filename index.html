@@ -3,257 +3,331 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdullah Haneef | AI Researcher & Computer Vision Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Abdullah Haneef - Portfolio</title>
     <style>
-        :root { --primary: #2c3e50; --accent: #3498db; --bg: #f8f9fa; --text: #333; --card-bg: #fff; }
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); margin: 0; background-color: var(--bg); }
-        header { background-color: #fff; padding: 4rem 2rem; text-align: center; border-bottom: 1px solid #eee; }
-        h1 { margin: 0; font-size: 2.5rem; color: var(--primary); }
-        .subtitle { color: #666; font-size: 1.2rem; margin-top: 0.5rem; }
-        .social-links { margin-top: 1.5rem; }
-        .social-links a { color: var(--primary); font-size: 1.5rem; margin: 0 10px; text-decoration: none; transition: color 0.3s; }
-        .social-links a:hover { color: var(--accent); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        section { margin-bottom: 3rem; }
-        h2 { border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; display: inline-block; margin-bottom: 1.5rem; color: var(--primary); cursor: pointer; }
-        .card { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 1.5rem; border-left: 4px solid var(--accent); transition: transform 0.3s, box-shadow 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .card-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
-        .card h3 { margin: 0 0 0.5rem 0; font-size: 1.25rem; }
-        .date { color: #888; font-size: 0.9rem; font-style: italic; }
-        .tags { margin-top: 0.5rem; }
-        .tags span { background: #e9ecef; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; color: #555; margin-right: 5px; }
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
-        .skill-category { background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #ddd; }
-        .skill-category h4 { margin: 0 0 0.5rem; font-size: 1rem; color: var(--primary); }
-        .skill-list { list-style: none; padding: 0; margin: 0; }
-        .skill-list li { background: #e9ecef; padding: 4px 8px; border-radius: 4px; margin-bottom: 5px; font-size: 0.9rem; }
-        .accordion { cursor: pointer; }
-        .accordion-content { display: none; }
-        .accordion.active .accordion-content { display: block; }
-        .timeline { position: relative; max-width: 100%; margin: 0 auto; }
-        .timeline::after { content: ''; position: absolute; width: 6px; background-color: #ddd; top: 0; bottom: 0; left: 50%; margin-left: -3px; }
-        .timeline-card { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
-        .timeline-card::after { content: ''; position: absolute; width: 25px; height: 25px; right: -17px; background-color: white; border: 4px solid var(--accent); top: 15px; border-radius: 50%; z-index: 1; }
-        .left { left: 0; }
-        .left::after { left: auto; right: -12px; }
-        .right { left: 50%; }
-        .right::after { left: -12px; }
-        @media (max-width: 600px) { 
-            header { padding: 2rem 1rem; } h1 { font-size: 2rem; } 
-            .timeline::after { left: 31px; }
-            .timeline-card { width: calc(100% - 62px); padding: 20px 20px 20px 60px; }
-            .timeline-card::after { left: 15px; }
-            .left, .right { left: 0; }
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
         }
-        footer { text-align: center; padding: 2rem; color: #666; font-size: 0.9rem; border-top: 1px solid #ddd; }
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            animation: fadeIn 1s ease-in;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        nav {
+            background: #333;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            border-bottom: 2px solid #1e3c72;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #1e3c72;
+        }
+        .accordion {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .accordion-header {
+            background: #f0f0f0;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .accordion-header:hover {
+            background: #e0e0e0;
+        }
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            background: #fafafa;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .skill-item {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Interactive Elements */
+        .interactive-link {
+            color: #1e3c72;
+            text-decoration: none;
+            border-bottom: 1px dotted #1e3c72;
+            transition: border-bottom 0.3s;
+        }
+        .interactive-link:hover {
+            border-bottom: 1px solid #1e3c72;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav li {
+                margin: 10px 0;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Abdullah Haneef</h1>
-        <div class="subtitle">AI Researcher | Computer Vision Engineer | ML Enthusiast</div>
-        <p style="max-width: 800px; margin: 1rem auto; color: #555;">
-            Passionate about advancing AI through research in computer vision, multimodal learning, and robot perception. 
-            Experienced in developing robust AI systems for real-world applications, with a focus on interpretability, adversarial defense, and sensor fusion.
-            Currently exploring mitochondrial morphology quantification and applying for PhD programs in AI.
-        </p>
-        <div class="social-links">
-            <a href="tel:+919810013833" title="Phone"><i class="fas fa-phone"></i></a>
-            <a href="mailto:abdullahhaneef08@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/yourgithubusername" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="resume.pdf" target="_blank" title="Resume"><i class="fas fa-file-pdf"></i> Resume</a>
-        </div>
+        <p>+91 9810013833 | abdullahhaneef08@gmail.com | <a href="https://www.linkedin.com/in/abdullahhaneef08" class="interactive-link" target="_blank">LinkedIn</a> | <a href="https://github.com/abdullahhaneef08" class="interactive-link" target="_blank">GitHub</a></p>
+        <p><a href="resume.pdf" class="interactive-link" download>Download Resume (PDF)</a></p>
     </header>
-    <div class="container">
-        <section id="education">
-            <h2 class="accordion">Education</h2>
+
+    <nav>
+        <ul>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#coursework">Relevant Coursework</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#research">Research Experience</a></li>
+            <li><a href="#work">Work Experience</a></li>
+            <li><a href="#service">Academic Service</a></li>
+            <li><a href="#projects">Select Projects</a></li>
+            <li><a href="#skills">Technical Skills</a></li>
+            <li><a href="#awards">Awards & Achievements</a></li>
+        </ul>
+    </nav>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">Delhi Technological University, Delhi, India</div>
             <div class="accordion-content">
-                <div class="card">
-                    <div class="card-header"><h3>Delhi Technological University, Delhi, India</h3><span class="date">Dec 2021 – Jul 2025</span></div>
-                    <p><strong>B.Tech. in Computer Engineering</strong> – CGPA: 9.03/10.00</p>
-                    <ul>
-                        <li>Bachelor Thesis: Decoding Pneumonia: Evaluating Convolutional Neural Networks and Transformer Architectures Using Integrated Gradients (Advisor: Prof. Rahul Katarya)</li>
-                        <li>Competitive Exams: JEE Advanced Rank 9716 (Top 1.5% of ∼1.5M candidates); JEE Mains Rank 6256 (Top 0.6%)</li>
-                        <li>English Proficiency: TOEFL iBT Score = 109/120</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section id="coursework">
-            <h2 class="accordion">Relevant Coursework</h2>
-            <div class="accordion-content">
-                <p><strong>Mathematics & Theory:</strong> Calculus I-II, Discrete Mathematics, Probability & Statistics, Logical Reasoning</p>
-                <p><strong>Computer Science:</strong> Artificial Intelligence, Machine Learning, Computer Vision, Data Structures & Algorithms, Computer Organization & Architecture, Computer Networks, Compiler Design, Operating Systems, Distributed Systems, DBMS, OOPS</p>
-            </div>
-        </section>
-        <section id="publications">
-            <h2 class="accordion">Publications</h2>
-            <div class="accordion-content">
-                <div class="card">
-                    <div class="card-header"><h3>Decoding Pneumonia: Evaluating Convolutional Neural Networks and Transformer Architectures Using Integrated Gradients</h3><span class="date">2025</span></div>
-                    <p>A. Haneef, A. Ahmad, R. Katarya. Proceedings of the ICDAM (Springer). <a href="[Link to Paper]" target="_blank">Link to Paper</a></p>
-                    <div class="tags"><span>CNNs</span><span>Transformers</span><span>Interpretability</span><span>Integrated Gradients</span></div>
-                </div>
-            </div>
-        </section>
-        <section id="research">
-            <h2 class="accordion">Research Experience</h2>
-            <div class="accordion-content timeline">
-                <div class="timeline-card left card">
-                    <div class="card-header"><h3>Mitralab, Ashoka University, Delhi, India</h3><span class="date">Oct 2025 – Present</span></div>
-                    <p><strong>Research Assistant</strong> (Advisors: Prof. Partha Pratim Chakrabarti, Prof. Kasturi Mitra)</p>
-                    <ul>
-                        <li>Developing a U-Net based pipeline to quantify mitochondrial morphology in human induced pluripotent stem cells (WTC-11).</li>
-                        <li>Implementing watershed segmentation to automate organelle analysis, targeting a 30-50% reduction in manual annotation time.</li>
-                    </ul>
-                    <div class="tags"><span>U-Net</span><span>Segmentation</span><span>Biology</span><span>Mitochondria</span></div>
-                </div>
-                <div class="timeline-card right card">
-                    <div class="card-header"><h3>AIISC, University of South Carolina, Remote, USA</h3><span class="date">Sep 2024 – Sep 2025</span></div>
-                    <p><strong>AI Researcher</strong> (Advisor: Prof. Amitava Das)</p>
-                    <ul>
-                        <li>Developed defense mechanisms for text-to-image models against adversarial perturbations using Patch-based Optimization.</li>
-                        <li>Achieved a 65% recovery in model accuracy against PGD and FGSM attacks by regularizing the latent space representation.</li>
-                    </ul>
-                    <div class="tags"><span>Adversarial Defense</span><span>Text-to-Image</span><span>PGD</span><span>FGSM</span></div>
-                </div>
-                <div class="timeline-card left card">
-                    <div class="card-header"><h3>Unmanned Aerial Systems Laboratory, DTU, Delhi, India</h3><span class="date">Aug 2024 – Aug 2025</span></div>
-                    <p><strong>AI Research Intern</strong> (Advisor: Prof. S. Indu)</p>
-                    <ul>
-                        <li>Improved the semantic segmentation of off-road terrains by integrating Diffusion optimization into the U-Net bottleneck.</li>
-                        <li>Refined object boundary detection in unstructured environments, increasing Mean IoU (mIoU) by 4% compared to the baseline.</li>
-                    </ul>
-                    <div class="tags"><span>Semantic Segmentation</span><span>Diffusion</span><span>U-Net</span><span>mIoU</span></div>
-                </div>
-                <div class="timeline-card right card">
-                    <div class="card-header"><h3>Machine Learning Laboratory, DTU, Delhi, India</h3><span class="date">Jul 2023 – Feb 2024</span></div>
-                    <p><strong>AI Research Intern</strong> (Advisor: Prof. Anil Parihar)</p>
-                    <ul>
-                        <li>Simulated Vision-Language-Navigation (VLN) agents in the Matterport3D environment.</li>
-                        <li>Incorporated Multi-View Geometry constraints to resolve object occlusion, increasing navigation Success Rate (SR) by 12%.</li>
-                    </ul>
-                    <div class="tags"><span>VLN</span><span>Multi-View Geometry</span><span>Matterport3D</span><span>Navigation</span></div>
-                </div>
-                <div class="timeline-card left card">
-                    <div class="card-header"><h3>DTU Self-Driving Car Project, Delhi, India</h3><span class="date">Dec 2021 – Jul 2023</span></div>
-                    <p><strong>ML Research & Perception Lead</strong> (Advisor: Prof. Qasim Murtaza)</p>
-                    <ul>
-                        <li>Architected a sensor fusion pipeline integrating Velodyne LiDAR and ZED 2 Stereo Camera for 3D object detection, achieving 88% mAP@0.5.</li>
-                        <li>Implemented Extended Kalman Filters (EKF) for SLAM, reducing localization error by < 10cm RMSE in GPS-denied environments.</li>
-                        <li>Deployed the perception stack on NVIDIA Jetson AGX using ROS2/C++.</li>
-                    </ul>
-                    <div class="tags"><span>Sensor Fusion</span><span>LiDAR</span><span>SLAM</span><span>ROS2</span></div>
-                </div>
-            </div>
-        </section>
-        <section id="work">
-            <h2 class="accordion">Work Experience</h2>
-            <div class="accordion-content">
-                <div class="card">
-                    <div class="card-header"><h3>BlockVerse Institute, Remote, Netherlands</h3><span class="date">Feb 2024 – Jul 2024</span></div>
-                    <p><strong>Artificial Intelligence Intern</strong></p>
-                    <ul>
-                        <li>Engineered "Insight Hire," a multimodal interviewing system fusing visual cues with audio features extracted via Wav2Vec.</li>
-                        <li>Implemented real-time proctoring algorithms to detect anomalies, achieving a false positive rate of < 5% during live sessions.</li>
-                    </ul>
-                    <div class="tags"><span>Multimodal</span><span>Wav2Vec</span><span>Proctoring</span><span>Real-time</span></div>
-                </div>
-            </div>
-        </section>
-        <section id="service">
-            <h2 class="accordion">Academic Service</h2>
-            <div class="accordion-content">
-                <p><strong>Reviewer:</strong> International Journal of Electrical and Computer Engineering (IJECE) (Scopus Indexed).</p>
-            </div>
-        </section>
-        <section id="projects">
-            <h2 class="accordion">Select Projects</h2>
-            <div class="accordion-content">
-                <div class="card">
-                    <div class="card-header"><h3>Image-Caption Generator</h3></div>
-                    <p>PyTorch, Inception v3, LSTM</p>
-                    <ul>
-                        <li>Implemented an Encoder-Decoder architecture using Inception v3 for feature extraction and LSTM for caption generation.</li>
-                        <li>Achieved a BLEU-4 score of 26.5 on the Flickr8k test split. <a href="[Code]" target="_blank">Code</a></li>
-                    </ul>
-                    <div class="tags"><span>PyTorch</span><span>Inception v3</span><span>LSTM</span><span>BLEU</span></div>
-                </div>
-                <div class="card">
-                    <div class="card-header"><h3>Video Interview Analysis Tool</h3></div>
-                    <p>OpenCV, OpenPose, FER</p>
-                    <ul>
-                        <li>Developed a CV pipeline detecting micro-expressions and posture deviations using FER and OpenPose algorithms.</li>
-                        <li>Deployed via Streamlit; optimized frame processing to run at 30 FPS on CPU. <a href="[Code]" target="_blank">Code</a></li>
-                    </ul>
-                    <div class="tags"><span>OpenCV</span><span>OpenPose</span><span>FER</span><span>Streamlit</span></div>
-                </div>
-            </div>
-        </section>
-        <section id="skills">
-            <h2 class="accordion">Technical Skills</h2>
-            <div class="accordion-content skills-grid">
-                <div class="skill-category">
-                    <h4>Programming</h4>
-                    <ul class="skill-list">
-                        <li>Python</li>
-                        <li>C++</li>
-                        <li>SQL</li>
-                        <li>Bash</li>
-                        <li>LaTeX</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Frameworks</h4>
-                    <ul class="skill-list">
-                        <li>PyTorch</li>
-                        <li>TensorFlow</li>
-                        <li>ROS/ROS2</li>
-                        <li>OpenCV</li>
-                        <li>HuggingFace Transformers</li>
-                        <li>Docker</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Research Interests</h4>
-                    <ul class="skill-list">
-                        <li>Computer Vision</li>
-                        <li>Multimodal Learning</li>
-                        <li>Robot Perception</li>
-                        <li>Generative AI</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Concepts</h4>
-                    <ul class="skill-list">
-                        <li>SLAM</li>
-                        <li>Sensor Fusion</li>
-                        <li>Graph Neural Networks</li>
-                        <li>Markov Decision Processes</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section id="awards">
-            <h2 class="accordion">Awards & Achievements</h2>
-            <div class="accordion-content">
+                <p>B.Tech. in Computer Engineering – CGPA: 9.03/10.00</p>
+                <p>Dec 2021 – Jul 2025</p>
                 <ul>
-                    <li><strong>Formula Student Italy (2022):</strong> Won 2nd prize in Business Plan; Ranked 8th overall among 200 international teams.</li>
-                    <li><strong>Execute 2.0 Hackathon (2022):</strong> Top 10 Finalist among 100+ teams; built a proximity-based competitive platform for street vendors.</li>
+                    <li>Bachelor Thesis: Decoding Pneumonia: Evaluating Convolutional Neural Networks and Transformer Architectures Using Integrated Gradients (Advisor: Prof. Rahul Katarya)</li>
+                    <li>Competitive Exams: JEE Advanced Rank 9716 (Top 1.5% of ∼1.5M candidates); JEE Mains Rank 6256 (Top 0.6%)</li>
+                    <li>English Proficiency: TOEFL iBT Score = 109/120</li>
                 </ul>
             </div>
-        </section>
-    </div>
-    <footer><p>&copy; 2026 Abdullah Haneef. All rights reserved.</p></footer>
+        </div>
+    </section>
+
+    <section id="coursework">
+        <h2>Relevant Coursework</h2>
+        <p>Mathematics & Theory: Calculus I-II, Discrete Mathematics, Probability & Statistics, Logical Reasoning</p>
+        <p>Computer Science: Artificial Intelligence, Machine Learning, Computer Vision, Data Structures & Algorithms, Computer Organization & Architecture, Computer Networks, Compiler Design, Operating Systems, Distributed Systems, DBMS, OOPS</p>
+    </section>
+
+    <section id="publications">
+        <h2>Publications</h2>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">Decoding Pneumonia: Evaluating Convolutional Neural Networks and Transformer Architectures Using Integrated Gradients</div>
+            <div class="accordion-content">
+                <p>A. Haneef, A. Ahmad, R. Katarya. Proceedings of the ICDAM (Springer), 2025. <a href="[Link to Paper]" class="interactive-link" target="_blank">Link to Paper</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="research">
+        <h2>Research Experience</h2>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">Mitralab, Ashoka University, Delhi, India (Oct 2025 – Present)</div>
+            <div class="accordion-content">
+                <p>Research Assistant (Advisor: Prof. Partha Pratim Chakrabarti, Prof. Kasturi Mitra)</p>
+                <ul>
+                    <li>Developing a U-Net based pipeline to quantify mitochondrial morphology in human induced pluripotent stem cells (WTC-11).</li>
+                    <li>Implementing watershed segmentation to automate organelle analysis, targeting a 30-50% reduction in manual annotation time.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">AIISC, University of South Carolina, Remote, USA (Sep 2024 – Sep 2025)</div>
+            <div class="accordion-content">
+                <p>AI Researcher (Advisor: Prof. Amitava Das)</p>
+                <ul>
+                    <li>Developed defense mechanisms for text-to-image models against adversarial perturbations using Patch-based Optimization.</li>
+                    <li>Achieved a 65% recovery in model accuracy against PGD and FGSM attacks by regularizing the latent space representation.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">Unmanned Aerial Systems Laboratory, DTU, Delhi, India (Aug 2024 – Aug 2025)</div>
+            <div class="accordion-content">
+                <p>AI Research Intern (Advisor: Prof. S. Indu)</p>
+                <ul>
+                    <li>Improved the semantic segmentation of off-road terrains by integrating Diffusion optimization into the U-Net bottleneck.</li>
+                    <li>Refined object boundary detection in unstructured environments, increasing Mean IoU (mIoU) by 4% compared to the baseline.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">Machine Learning Laboratory, DTU, Delhi, India (Jul 2023 – Feb 2024)</div>
+            <div class="accordion-content">
+                <p>AI Research Intern (Advisor: Prof. Anil Parihar)</p>
+                <ul>
+                    <li>Simulated Vision-Language-Navigation (VLN) agents in the Matterport3D environment.</li>
+                    <li>Incorporated Multi-View Geometry constraints to resolve object occlusion, increasing navigation Success Rate (SR) by 12%.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">DTU Self-Driving Car Project, Delhi, India (Dec 2021 – Jul 2023)</div>
+            <div class="accordion-content">
+                <p>ML Research & Perception Lead (Advisor: Prof. Qasim Murtaza)</p>
+                <ul>
+                    <li>Architected a sensor fusion pipeline integrating Velodyne LiDAR and ZED 2 Stereo Camera for 3D object detection, achieving 88% mAP@0.5.</li>
+                    <li>Implemented Extended Kalman Filters (EKF) for SLAM, reducing localization error by < 10cm RMSE in GPS-denied environments.</li>
+                    <li>Deployed the perception stack on NVIDIA Jetson AGX using ROS2/C++.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="work">
+        <h2>Work Experience</h2>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">BlockVerse Institute, Remote, Netherlands (Feb 2024 – Jul 2024)</div>
+            <div class="accordion-content">
+                <p>Artificial Intelligence Intern</p>
+                <ul>
+                    <li>Engineered “Insight Hire,” a multimodal interviewing system fusing visual cues with audio features extracted via Wav2Vec.</li>
+                    <li>Implemented real-time proctoring algorithms to detect anomalies, achieving a false positive rate of < 5% during live sessions.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="service">
+        <h2>Academic Service</h2>
+        <p>Reviewer: International Journal of Electrical and Computer Engineering (IJECE) (Scopus Indexed).</p>
+    </section>
+
+    <section id="projects">
+        <h2>Select Projects</h2>
+        <div class="project-card">
+            <h3>Image-Caption Generator | PyTorch, Inception v3, LSTM</h3>
+            <ul>
+                <li>Implemented an Encoder-Decoder architecture using Inception v3 for feature extraction and LSTM for caption generation.</li>
+                <li>Achieved a BLEU-4 score of 26.5 on the Flickr8k test split. <a href="[Code]" class="interactive-link" target="_blank">Code</a></li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <h3>Video Interview Analysis Tool | OpenCV, OpenPose, FER</h3>
+            <ul>
+                <li>Developed a CV pipeline detecting micro-expressions and posture deviations using FER and OpenPose algorithms.</li>
+                <li>Deployed via Streamlit; optimized frame processing to run at 30 FPS on CPU. <a href="[Code]" class="interactive-link" target="_blank">Code</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>Programming</h3>
+                <p>Python, C++, SQL, Bash, LaTeX</p>
+            </div>
+            <div class="skill-item">
+                <h3>Frameworks</h3>
+                <p>PyTorch, TensorFlow, ROS/ROS2, OpenCV, HuggingFace Transformers, Docker</p>
+            </div>
+            <div class="skill-item">
+                <h3>Research Interests</h3>
+                <p>Computer Vision, Multimodal Learning, Robot Perception, Generative AI</p>
+            </div>
+            <div class="skill-item">
+                <h3>Concepts</h3>
+                <p>SLAM, Sensor Fusion, Graph Neural Networks, Markov Decision Processes</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="awards">
+        <h2>Awards & Achievements</h2>
+        <ul>
+            <li>Formula Student Italy (2022): Won 2nd prize in Business Plan; Ranked 8th overall among 200 international teams.</li>
+            <li>Execute 2.0 Hackathon (2022): Top 10 Finalist among 100+ teams; built a proximity-based competitive platform for street vendors.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Abdullah Haneef. All rights reserved.</p>
+    </footer>
+
     <script>
-        document.querySelectorAll('.accordion').forEach(item => {
-            item.addEventListener('click', () => {
-                item.classList.toggle('active');
-            });
-        });
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
     </script>
 </body>
 </html>
